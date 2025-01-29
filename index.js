@@ -5,7 +5,7 @@ function peso(){
     const pesoInput = document.getElementById("pesos").value;
     const alturaInput = document.getElementById("altura").value;
 
-    if (!pesoInput || !alturaInput || (pesoInput) || (alturaInput)) {
+    if (!pesoInput || !alturaInput || isNaN(pesoInput) || isNaN(alturaInput)) {
         document.getElementById("resultado").innerHTML = "Por favor, insira valores válidos!";
         return;
     }
@@ -28,3 +28,4 @@ function peso(){
 }
 
 btn.addEventListener("click", peso)
+
